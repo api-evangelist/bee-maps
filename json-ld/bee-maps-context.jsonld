@@ -1,0 +1,166 @@
+{
+  "@context": {
+    "@vocab": "https://nasdaqprivatemarket.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "bee": "https://nasdaqprivatemarket.com/schema#",
+    "GeoJSONPolygon": "bee:GeoJSONPolygon",
+    "type": {
+      "@id": "bee:type",
+      "@type": "xsd:string"
+    },
+    "coordinates": {
+      "@id": "bee:coordinates",
+      "@container": "@list"
+    },
+    "ImageryFrame": "bee:ImageryFrame",
+    "url": {
+      "@id": "bee:url",
+      "@type": "@id"
+    },
+    "timestamp": {
+      "@id": "bee:timestamp",
+      "@type": "xsd:dateTime"
+    },
+    "position": {
+      "@id": "bee:position"
+    },
+    "device": {
+      "@id": "bee:device",
+      "@type": "xsd:string"
+    },
+    "sequence": {
+      "@id": "bee:sequence",
+      "@type": "xsd:string"
+    },
+    "idx": {
+      "@id": "bee:idx",
+      "@type": "xsd:integer"
+    },
+    "width": {
+      "@id": "bee:width",
+      "@type": "xsd:integer"
+    },
+    "height": {
+      "@id": "bee:height",
+      "@type": "xsd:integer"
+    },
+    "MapFeature": "bee:MapFeature",
+    "id": {
+      "@id": "bee:id",
+      "@type": "xsd:string"
+    },
+    "class": {
+      "@id": "bee:class",
+      "@type": "xsd:string"
+    },
+    "properties": {
+      "@id": "bee:properties"
+    },
+    "confidence": {
+      "@id": "bee:confidence",
+      "@type": "xsd:decimal"
+    },
+    "dimensions": {
+      "@id": "bee:dimensions"
+    },
+    "firstObserved": {
+      "@id": "bee:firstObserved",
+      "@type": "xsd:dateTime"
+    },
+    "lastObserved": {
+      "@id": "bee:lastObserved",
+      "@type": "xsd:dateTime"
+    },
+    "BurstRequest": "bee:BurstRequest",
+    "geojson": {
+      "@id": "bee:geojson"
+    },
+    "credits": {
+      "@id": "bee:credits",
+      "@type": "xsd:integer"
+    },
+    "BurstLocation": "bee:BurstLocation",
+    "status": {
+      "@id": "bee:status",
+      "@type": "xsd:string"
+    },
+    "location": {
+      "@id": "bee:location"
+    },
+    "validFrom": {
+      "@id": "bee:validFrom",
+      "@type": "xsd:dateTime"
+    },
+    "validUntil": {
+      "@id": "bee:validUntil",
+      "@type": "xsd:dateTime"
+    },
+    "hit": {
+      "@id": "bee:hit",
+      "@type": "xsd:boolean"
+    },
+    "hitTimestamp": {
+      "@id": "bee:hitTimestamp",
+      "@type": "xsd:dateTime"
+    },
+    "MapDataRequest": "bee:MapDataRequest",
+    "geometry": {
+      "@id": "bee:geometry"
+    },
+    "AIEventSearch": "bee:AIEventSearch",
+    "startDate": {
+      "@id": "bee:startDate",
+      "@type": "xsd:dateTime"
+    },
+    "endDate": {
+      "@id": "bee:endDate",
+      "@type": "xsd:dateTime"
+    },
+    "types": {
+      "@id": "bee:types",
+      "@container": "@list"
+    },
+    "limit": {
+      "@id": "bee:limit",
+      "@type": "xsd:integer"
+    },
+    "offset": {
+      "@id": "bee:offset",
+      "@type": "xsd:integer"
+    },
+    "AIEvent": "bee:AIEvent",
+    "lat": {
+      "@id": "bee:lat",
+      "@type": "xsd:decimal"
+    },
+    "lng": {
+      "@id": "bee:lng",
+      "@type": "xsd:decimal"
+    },
+    "videoUrl": {
+      "@id": "bee:videoUrl",
+      "@type": "@id"
+    },
+    "duration": {
+      "@id": "bee:duration",
+      "@type": "xsd:decimal"
+    },
+    "gnssData": {
+      "@id": "bee:gnssData",
+      "@container": "@list"
+    },
+    "imuData": {
+      "@id": "bee:imuData",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Bee Maps API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Bee Maps's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-27) from openapi/openapi.json.",
+  "dcterms:created": "2026-09-27",
+  "dcterms:source": [
+    "openapi/openapi.json"
+  ]
+}

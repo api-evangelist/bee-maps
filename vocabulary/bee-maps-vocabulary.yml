@@ -1,0 +1,80 @@
+generated: '2026-09-27'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/openapi.json
+vocabulary:
+  name: Bee Maps Domain Vocabulary
+  description: 'Terms declared by Bee Maps''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-27'
+  terms:
+  - term: imagery
+    definition: Street-level dashcam imagery
+    tags:
+    - Resource Group
+    source: openapi/openapi.json
+  - term: map-features
+    definition: ML-detected road objects
+    tags:
+    - Resource Group
+    source: openapi/openapi.json
+  - term: bursts
+    definition: On-demand mapping requests
+    tags:
+    - Resource Group
+    source: openapi/openapi.json
+  - term: ai-events
+    definition: AI-detected driving events with video
+    tags:
+    - Resource Group
+    source: openapi/openapi.json
+  - term: account
+    definition: Account balance and usage
+    tags:
+    - Resource Group
+    source: openapi/openapi.json
+  - term: devices
+    definition: Camera calibration data
+    tags:
+    - Resource Group
+    source: openapi/openapi.json
+  - term: GeoJSONPolygon
+    definition: 'Object declared by the contract with fields: type, coordinates.'
+    tags:
+    - Object
+    source: openapi/openapi.json#/components/schemas/GeoJSONPolygon
+  - term: ImageryFrame
+    definition: 'Object declared by the contract with fields: url, timestamp, position, device, sequence, idx, width, height.'
+    tags:
+    - Object
+    source: openapi/openapi.json#/components/schemas/ImageryFrame
+  - term: MapFeature
+    definition: 'Object declared by the contract with fields: id, class, position, properties, confidence, dimensions, firstObserved, lastObserved.'
+    tags:
+    - Object
+    source: openapi/openapi.json#/components/schemas/MapFeature
+  - term: BurstRequest
+    definition: 'Object declared by the contract with fields: geojson, credits.'
+    tags:
+    - Object
+    source: openapi/openapi.json#/components/schemas/BurstRequest
+  - term: BurstLocation
+    definition: 'Object declared by the contract with fields: id, status, location, geojson, validFrom, validUntil, hit, hitTimestamp, credits.'
+    tags:
+    - Object
+    source: openapi/openapi.json#/components/schemas/BurstLocation
+  - term: MapDataRequest
+    definition: 'Object declared by the contract with fields: type, geometry.'
+    tags:
+    - Object
+    source: openapi/openapi.json#/components/schemas/MapDataRequest
+  - term: AIEventSearch
+    definition: Date range must be 31 days or less.
+    tags:
+    - Object
+    source: openapi/openapi.json#/components/schemas/AIEventSearch
+  - term: AIEvent
+    definition: 'Object declared by the contract with fields: id, type, timestamp, lat, lng, videoUrl, duration, gnssData, imuData.'
+    tags:
+    - Object
+    source: openapi/openapi.json#/components/schemas/AIEvent

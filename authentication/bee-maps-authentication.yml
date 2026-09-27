@@ -1,0 +1,23 @@
+generated: '2026-09-27'
+method: derived
+source: openapi/openapi.json
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - query
+schemes:
+- name: BasicAuth
+  type: http
+  scheme: basic
+  description: 'API key passed as Basic auth header: `Authorization: Basic <API_KEY>`'
+  sources:
+  - openapi/openapi.json
+- name: ApiKeyQuery
+  type: apiKey
+  in: query
+  parameter: apiKey
+  description: API key passed as query parameter (used for burst endpoints)
+  sources:
+  - openapi/openapi.json

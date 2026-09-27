@@ -1,23 +1,123 @@
 aid: bee-maps
+
 name: Bee Maps
-description: 'Bee Maps is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bee Maps is currently a stub entry in the API Evangelist catalog with no publicly available website or detailed information. The company appears in secondary-market harvest data but lacks an identifiable domain, API documentation, or official online presence. Consequently, the entry serves as a placeholder for future enrichment when verifiable resources become available.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bee-maps/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Mapping
+- GIS
+- Location
+- Data
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: AgenticAccess
+  url: agentic-access/bee-maps-agentic-access.yml
+- type: Spectral
+  url: rules/bee-maps-rules.yml
+- type: JSONLD
+  url: json-ld/bee-maps-context.jsonld
+- type: Vocabulary
+  url: vocabulary/bee-maps-vocabulary.yml
+- type: DataModel
+  url: data-model/bee-maps-data-model.yml
+- type: ErrorCatalog
+  url: errors/bee-maps-problem-types.yml
+- type: Conformance
+  url: conformance/bee-maps-conformance.yml
+- type: Hosts
+  url: hosts/bee-maps-hosts.yml
+- type: Vendors
+  url: vendors/bee-maps-vendors.yml
+- type: DomainSecurity
+  url: security/bee-maps-domain-security.yml
+- type: Authentication
+  url: authentication/bee-maps-authentication.yml
 - type: Website
   url: https://www.nasdaqprivatemarket.com/
+
+apis:
+- aid: bee-maps:bee-maps-account-api
+  name: Bee Maps Account API
+  description: Account balance and usage
+  tags:
+  - account
+  properties:
+  - type: OpenAPI
+    url: openapi/bee-maps-account-api-openapi.yml
+- aid: bee-maps:bee-maps-ai-events-api
+  name: Bee Maps AI Events API
+  description: AI-detected driving events with video
+  tags:
+  - ai-events
+  properties:
+  - type: OpenAPI
+    url: openapi/bee-maps-ai-events-api-openapi.yml
+- aid: bee-maps:bee-maps-bursts-api
+  name: Bee Maps Bursts API
+  description: On-demand mapping requests
+  tags:
+  - bursts
+  properties:
+  - type: OpenAPI
+    url: openapi/bee-maps-bursts-api-openapi.yml
+- aid: bee-maps:bee-maps-devices-api
+  name: Bee Maps Devices API
+  description: Camera calibration data
+  tags:
+  - devices
+  properties:
+  - type: OpenAPI
+    url: openapi/bee-maps-devices-api-openapi.yml
+- aid: bee-maps:bee-maps-imagery-api
+  name: Bee Maps Imagery API
+  description: Street-level dashcam imagery
+  tags:
+  - imagery
+  properties:
+  - type: OpenAPI
+    url: openapi/bee-maps-imagery-api-openapi.yml
+- aid: bee-maps:bee-maps-map-features-api
+  name: Bee Maps Map Features API
+  description: ML-detected road objects
+  tags:
+  - map-features
+  properties:
+  - type: OpenAPI
+    url: openapi/bee-maps-map-features-api-openapi.yml
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No API documentation or machine‑readable contract was found on the company's site or any discovered hosts.
+  evidence:
+    - url: https://www.nasdaqprivatemarket.com/company/bee-maps/
+      status: 200
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 13
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
