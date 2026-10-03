@@ -1,7 +1,7 @@
 {
   "provider": "bee-maps",
   "sources": [
-    "openapi.json"
+    "_original/openapi.json"
   ],
   "outputs": [
     "bee-maps-account-api-openapi.yml",
@@ -11,14 +11,20 @@
     "bee-maps-imagery-api-openapi.yml",
     "bee-maps-map-features-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/openapi.json"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+6 apis, 6 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "bee-maps-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bee-maps-ai-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bee-maps-bursts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bee-maps-devices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bee-maps-imagery-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bee-maps-map-features-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

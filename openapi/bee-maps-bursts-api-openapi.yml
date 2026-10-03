@@ -90,14 +90,14 @@ paths:
       x-operation-id-source: derived
 components:
   responses:
-    BadRequest:
-      description: Bad Request — invalid geometry, missing required fields, or malformed JSON
-    Forbidden:
-      description: Forbidden — missing or invalid API key
     RateLimited:
       description: 'Too Many Requests — rate limit exceeded (default: 100 req/min)'
     PaymentRequired:
       description: Payment Required — insufficient credits
+    BadRequest:
+      description: Bad Request — invalid geometry, missing required fields, or malformed JSON
+    Forbidden:
+      description: Forbidden — missing or invalid API key
   schemas:
     BurstRequest:
       type: object
@@ -124,27 +124,6 @@ components:
         credits:
           type: integer
           description: Credits to allocate
-    GeoJSONPolygon:
-      type: object
-      required:
-      - type
-      - coordinates
-      properties:
-        type:
-          type: string
-          enum:
-          - Polygon
-        coordinates:
-          type: array
-          items:
-            type: array
-            items:
-              type: array
-              items:
-                type: number
-              minItems: 2
-              maxItems: 2
-            minItems: 4
     BurstLocation:
       type: object
       properties:
@@ -181,6 +160,27 @@ components:
           format: date-time
         credits:
           type: integer
+    GeoJSONPolygon:
+      type: object
+      required:
+      - type
+      - coordinates
+      properties:
+        type:
+          type: string
+          enum:
+          - Polygon
+        coordinates:
+          type: array
+          items:
+            type: array
+            items:
+              type: array
+              items:
+                type: number
+              minItems: 2
+              maxItems: 2
+            minItems: 4
   securitySchemes:
     BasicAuth:
       type: http
