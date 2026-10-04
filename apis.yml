@@ -63,6 +63,8 @@ apis:
   name: Bee Maps Account API
   description: Account balance and usage
   tags:
+  - Account
+  tags_raw:
   - account
   properties:
   - type: OpenAPI
@@ -71,6 +73,8 @@ apis:
   name: Bee Maps AI Events API
   description: AI-detected driving events with video
   tags:
+  - AI Events
+  tags_raw:
   - ai-events
   properties:
   - type: OpenAPI
@@ -79,6 +83,8 @@ apis:
   name: Bee Maps Bursts API
   description: On-demand mapping requests
   tags:
+  - Bursts
+  tags_raw:
   - bursts
   properties:
   - type: OpenAPI
@@ -87,6 +93,8 @@ apis:
   name: Bee Maps Devices API
   description: Camera calibration data
   tags:
+  - Devices
+  tags_raw:
   - devices
   properties:
   - type: OpenAPI
@@ -95,6 +103,8 @@ apis:
   name: Bee Maps Imagery API
   description: Street-level dashcam imagery
   tags:
+  - Imagery
+  tags_raw:
   - imagery
   properties:
   - type: OpenAPI
@@ -103,6 +113,8 @@ apis:
   name: Bee Maps Map Features API
   description: ML-detected road objects
   tags:
+  - Map Features
+  tags_raw:
   - map-features
   properties:
   - type: OpenAPI
