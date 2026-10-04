@@ -140,12 +140,12 @@ components:
   responses:
     RateLimited:
       description: 'Too Many Requests — rate limit exceeded (default: 100 req/min)'
-    PaymentRequired:
-      description: Payment Required — insufficient credits
     BadRequest:
       description: Bad Request — invalid geometry, missing required fields, or malformed JSON
     Forbidden:
       description: Forbidden — missing or invalid API key
+    PaymentRequired:
+      description: Payment Required — insufficient credits
   securitySchemes:
     BasicAuth:
       type: http

@@ -89,15 +89,6 @@ paths:
       operationId: getBursts
       x-operation-id-source: derived
 components:
-  responses:
-    RateLimited:
-      description: 'Too Many Requests — rate limit exceeded (default: 100 req/min)'
-    PaymentRequired:
-      description: Payment Required — insufficient credits
-    BadRequest:
-      description: Bad Request — invalid geometry, missing required fields, or malformed JSON
-    Forbidden:
-      description: Forbidden — missing or invalid API key
   schemas:
     BurstRequest:
       type: object
@@ -181,6 +172,15 @@ components:
               minItems: 2
               maxItems: 2
             minItems: 4
+  responses:
+    RateLimited:
+      description: 'Too Many Requests — rate limit exceeded (default: 100 req/min)'
+    BadRequest:
+      description: Bad Request — invalid geometry, missing required fields, or malformed JSON
+    Forbidden:
+      description: Forbidden — missing or invalid API key
+    PaymentRequired:
+      description: Payment Required — insufficient credits
   securitySchemes:
     BasicAuth:
       type: http
